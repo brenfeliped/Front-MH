@@ -10,7 +10,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { Link as LinkReact} from 'react-router-dom'
+import { Link as LinkReact } from 'react-router-dom'
 
 function Copyright() {
   return (
@@ -49,7 +49,7 @@ export default function SignUp() {
   const classes = useStyles();
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" backgroundColor="black">
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
@@ -107,7 +107,7 @@ export default function SignUp() {
               />
             </Grid>
           </Grid>
-            <LinkReact to="/" style={{ textDecoration: 'none' }} >
+          <LinkReact to="/" style={{ textDecoration: 'none' }} >
             <Button
               type="submit"
               fullWidth
@@ -120,7 +120,7 @@ export default function SignUp() {
           </LinkReact>
           <Grid container justify="flex-end">
             <Grid item>
-            <LinkReact to="/" style={{ color: '#888', textDecoration: 'none' }} >
+              <LinkReact to="/" style={{ color: '#888', textDecoration: 'none' }} >
                 Ja possui uma conta? Entrar
               </LinkReact>
             </Grid>
