@@ -116,7 +116,7 @@ export default function CadastroProduto() {
             id="password"
             autoComplete="current-password"
           />
-          <LinkReact to="/dashboard" style={{ textDecoration: 'none' }}>
+          <LinkReact to="/painel" style={{ textDecoration: 'none' }}>
             <Button
               type="submit"
               fullWidth

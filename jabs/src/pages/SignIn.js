@@ -87,7 +87,7 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Lembrar login"
           />
-          <LinkReact to="/dashboard" style={{ textDecoration: 'none' }}>
+          <LinkReact to="/painel" style={{ textDecoration: 'none' }}>
             <Button
               type="submit"
               fullWidth
