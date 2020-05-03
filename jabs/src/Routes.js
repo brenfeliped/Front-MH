@@ -5,6 +5,7 @@ import SignIn from './pages/SignIn';
 import Dashboard from './pages/Dashboard/Dashboard';
 import SignUp from './pages/Singnup';
 import CadastroProduto from './pages/Dashboard/CadastroProduto'
+import ListarProdutos from './pages/Dashboard/ListarProdutos'
 
 export default function Routes() {
   return (
@@ -14,6 +15,7 @@ export default function Routes() {
         <Route path='/' exact component={SignIn} />
         <Route path='/dashboard' exact component={Dashboard} />
         <Route path='/cadastroProduto' exact component={CadastroProduto} />
+        <Route path='/painel' exact component={ListarProdutos} />
       </Switch>
     </BrowserRouter>
   )
