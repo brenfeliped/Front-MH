@@ -107,7 +107,7 @@ export default function SignUp() {
               />
             </Grid>
           </Grid>
-            <LinkReact to="/" style={{ color: '#FFF' }} >
+            <LinkReact to="/" style={{ textDecoration: 'none' }} >
             <Button
               type="submit"
               fullWidth
@@ -120,7 +120,7 @@ export default function SignUp() {
           </LinkReact>
           <Grid container justify="flex-end">
             <Grid item>
-            <LinkReact to="/" style={{ color: '#888' }} >
+            <LinkReact to="/" style={{ color: '#888', textDecoration: 'none' }} >
                 Ja possui uma conta? Entrar
               </LinkReact>
             </Grid>

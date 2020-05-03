@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SignIn() {
+export default function CadastroProduto() {
   const classes = useStyles();
 
   return (
@@ -58,7 +58,7 @@ export default function SignIn() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Login
+          Cadastrar Produto
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -67,7 +67,7 @@ export default function SignIn() {
             required
             fullWidth
             id="email"
-            label="Email"
+            label="Nome do Produto"
             name="email"
             autoComplete="email"
             autoFocus
@@ -78,14 +78,43 @@ export default function SignIn() {
             required
             fullWidth
             name="password"
-            label="Senha"
+            label="Nome do Fornecedor"
             type="password"
             id="password"
             autoComplete="current-password"
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Lembrar login"
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Peso"
+            type="password"
+            id="password"
+            autoComplete="current-password"
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Preço"
+            type="password"
+            id="password"
+            autoComplete="current-password"
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Quantidade em estoque"
+            type="password"
+            id="password"
+            autoComplete="current-password"
           />
           <LinkReact to="/dashboard" style={{ textDecoration: 'none' }}>
             <Button
@@ -95,21 +124,9 @@ export default function SignIn() {
               color="primary"
               className={classes.submit}
             >
-              Entrar
+              Cadastrar Produto
             </Button>
           </LinkReact>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Esqueceu a senha?
-              </Link>
-            </Grid>
-            <Grid item>
-            <LinkReact to="/cadastrar" style={{ color: '#888', textDecoration: 'none' }} >
-                {"Não possui uma conta? Cadastre-se"}
-              </LinkReact>
-            </Grid>
-          </Grid>
         </form>
       </div>
       <Box mt={8}>
