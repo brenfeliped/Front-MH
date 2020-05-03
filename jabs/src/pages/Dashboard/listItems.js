@@ -33,12 +33,14 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Fornecedores" />
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Conselhos Financeiros" />
-    </ListItem>
+    <Link to="/conselhos" style={{ textDecoration: 'none' }}>
+      <ListItem button>
+        <ListItemIcon>
+          <BarChartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Conselhos Financeiros" />
+      </ListItem>
+    </Link>
     <Link to="/cadastroProduto" style={{ textDecoration: 'none' }}>
       <ListItem button>
         <ListItemIcon>
