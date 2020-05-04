@@ -14,16 +14,16 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Deposits() {
+export default function Deposits(props) {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Total no mês</Title>
+      <Title>Total no dia</Title>
       <Typography component="p" variant="h4">
-        {"R$ " + (Math.floor(Math.random() * Math.floor(2000))).toString() + ",00"}
+        {"R$ " + (props.deposito).toString() + ",00"}
       </Typography>
       <Typography color="textSecondary" className={classes.depositContext}>
-        on 15 Março, 2019
+        em 15 Março, 2019
       </Typography>
       <div>
         <Link color="primary" href="#" onClick={preventDefault}>

@@ -38,6 +38,18 @@ function Copyright() {
   );
 }
 
+
+function createData(nome, fornecedor, peso, preco, quantidade) {
+  return { nome, fornecedor, peso, preco, quantidade };
+}
+
+const data = [
+  createData('Detergente', 'Ypê', '3 KG', 'R$ 4,00', 100),
+  createData('Coca Cola', 'Coca Cola', '3 KG', 'R$ 8,00', 100),
+  createData('Rosquinhas', 'Mabel', '1 KG', 'R$ 5,00', 100),
+  createData('Feijão', 'Kicaldo', '500g', 'R$ 8,00', 100),
+];
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -173,66 +185,23 @@ export default function ListarProdutos() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <ul>
-            <li>
-              <strong>NOME: </strong>
-              <p>Feijão</p>
-              <strong>FORNECEDOR: </strong>
-              <p>Ki Caldo</p>
-              <strong>PESO: </strong>
-              <p>3 KG</p>
-              <strong>PREÇO: </strong>
-              <p>R$ 3,00</p>
-              <strong>QUANTIDADE: </strong>
-              <p>100</p>
-              <button >
-                <Delete size={20} color="#a8a8b3" />
-              </button>
-            </li>
-            <li>
-              <strong>NOME: </strong>
-              <p>Rosquinhas</p>
-              <strong>FORNECEDOR: </strong>
-              <p>Mabel</p>
-              <strong>PESO: </strong>
-              <p>3 KG</p>
-              <strong>PREÇO: </strong>
-              <p>R$ 4,50</p>
-              <strong>QUANTIDADE: </strong>
-              <p>100</p>
-              <button >
-                <Delete size={20} color="#a8a8b3" />
-              </button>
-            </li>
-            <li>
-              <strong>NOME: </strong>
-              <p>Coca Cola</p>
-              <strong>FORNECEDOR: </strong>
-              <p>Coca Cola</p>
-              <strong>PESO: </strong>
-              <p>3 KG</p>
-              <strong>PREÇO: </strong>
-              <p>R$ 8,00</p>
-              <strong>QUANTIDADE: </strong>
-              <p>100</p>
-              <button >
-                <Delete size={20} color="#a8a8b3" />
-              </button>
-            </li>
-            <li>
-              <strong>NOME: </strong>
-              <p>Detergente</p>
-              <strong>FORNECEDOR: </strong>
-              <p>Ypê</p>
-              <strong>PESO: </strong>
-              <p>3 KG</p>
-              <strong>PREÇO: </strong>
-              <p>R$ 4,00</p>
-              <strong>QUANTIDADE: </strong>
-              <p>100</p>
-              <button >
-                <Delete size={20} color="#a8a8b3" />
-              </button>
-            </li>
+              {data.map((row) => (
+                <li>
+                  <strong>NOME: </strong>
+                  <p>{row.nome}</p>
+                  <strong>FORNECEDOR: </strong>
+                  <p>{row.fornecedor}</p>
+                  <strong>PESO: </strong>
+                  <p>{row.peso}</p>
+                  <strong>PREÇO: </strong>
+                  <p>{row.preco}</p>
+                  <strong>QUANTIDADE: </strong>
+                  <p>{row.quantidade}</p>
+                  <button >
+                    <Delete size={20} color="#a8a8b3" />
+                  </button>
+                </li>
+              ))}
           </ul>
         </Container>
       </main>

@@ -23,6 +23,29 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
+// Generate Sales Data
+function createData(time, amount) {
+  return { time, amount };
+}
+
+const data = [
+  createData('08:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('12:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('16:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('20:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('22:00', Math.floor(Math.random() * Math.floor(2000))),
+];
+
+function somaVendas(){
+  var deposito = 0;
+
+  data.map((row) => (
+    deposito = deposito + row.amount
+  ));
+
+  return deposito;
+}
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -174,13 +197,13 @@ export default function Dashboard() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Chart />
+                <Chart data={data}/>
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Deposits deposito={somaVendas()}/>
               </Paper>
             </Grid>
             {/* Recent Orders */}

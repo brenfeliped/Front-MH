@@ -23,6 +23,50 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Title from './Title';
 
+// Generate Sales Data
+function createData(time, amount) {
+  return { time, amount };
+}
+
+const data1 = [
+  createData('08:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('12:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('16:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('20:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('22:00', Math.floor(Math.random() * Math.floor(2000))),
+];
+const data2 = [
+  createData('08:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('12:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('16:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('20:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('22:00', Math.floor(Math.random() * Math.floor(2000))),
+];
+const data3 = [
+  createData('08:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('12:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('16:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('20:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('22:00', Math.floor(Math.random() * Math.floor(2000))),
+];
+const data4 = [
+  createData('08:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('12:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('16:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('20:00', Math.floor(Math.random() * Math.floor(2000))),
+  createData('22:00', Math.floor(Math.random() * Math.floor(2000))),
+];
+
+function somaVendas(data){
+  var deposito = 0;
+
+  data.map((row) => (
+    deposito = deposito + row.amount
+  ));
+
+  return deposito;
+}
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -174,14 +218,13 @@ export default function Vendas() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Title>Detergente Ypê</Title>
-                <Chart />
+                <Chart name="Feijão Kicaldo" data={data1}/>
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Deposits deposito={somaVendas(data1)}/>
               </Paper>
             </Grid>
           </Grid>
@@ -189,14 +232,13 @@ export default function Vendas() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Title>Feijão ki caldo</Title>
-                <Chart />
+                <Chart name="Rosquinhas Mabel" data={data2}/>
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Deposits deposito={somaVendas(data2)}/>
               </Paper>
             </Grid>
           </Grid>
@@ -204,14 +246,13 @@ export default function Vendas() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Title>Rosquinhas Mabel</Title>
-                <Chart />
+                <Chart name="Coca Cola" data={data3}/>
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Deposits deposito={somaVendas(data3)}/>
               </Paper>
             </Grid>
           </Grid>
@@ -219,14 +260,13 @@ export default function Vendas() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Title>Coca Cola</Title>
-                <Chart />
+                <Chart name="Detergente Ypê" data={data4}/>
               </Paper>
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <Deposits />
+                <Deposits deposito={somaVendas(data4)}/>
               </Paper>
             </Grid>
           </Grid>
