@@ -7,6 +7,7 @@ import SignUp from './pages/Singnup';
 import CadastroProduto from './pages/Dashboard/CadastroProduto';
 import ListarProdutos from './pages/Dashboard/ListarProdutos';
 import Conselhos from './pages/Dashboard/Conselhos';
+import Vendas from './pages/Dashboard/Vendas';
 
 export default function Routes() {
   return (
@@ -18,6 +19,7 @@ export default function Routes() {
         <Route path='/cadastroProduto' exact component={CadastroProduto} />
         <Route path='/painel' exact component={ListarProdutos} />
         <Route path='/conselhos' exact component={Conselhos} />
+        <Route path='/vendas' exact component={Vendas} />
       </Switch>
     </BrowserRouter>
   )

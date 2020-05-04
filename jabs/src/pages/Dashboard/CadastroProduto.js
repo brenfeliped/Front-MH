@@ -116,6 +116,17 @@ export default function CadastroProduto() {
             id="password"
             autoComplete="current-password"
           />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="password"
+            label="Quantidade Mínima Aceitavel"
+            type="password"
+            id="password"
+            autoComplete="current-password"
+          />
           <LinkReact to="/painel" style={{ textDecoration: 'none' }}>
             <Button
               type="submit"

@@ -39,11 +39,11 @@ export default function Orders() {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Date</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell align="right">Sale Amount</TableCell>
+            <TableCell>Data</TableCell>
+            <TableCell>Nome</TableCell>
+            <TableCell>Entrega para</TableCell>
+            <TableCell>Método de Pagamento</TableCell>
+            <TableCell align="right">Valor</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

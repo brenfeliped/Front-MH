@@ -181,7 +181,7 @@ export default function ListarProdutos() {
               <strong>PESO: </strong>
               <p>3 KG</p>
               <strong>PREÇO: </strong>
-              <p>R$ 6,00</p>
+              <p>R$ 3,00</p>
               <strong>QUANTIDADE: </strong>
               <p>100</p>
               <button >
@@ -190,13 +190,13 @@ export default function ListarProdutos() {
             </li>
             <li>
               <strong>NOME: </strong>
-              <p>Feijão</p>
+              <p>Rosquinhas</p>
               <strong>FORNECEDOR: </strong>
-              <p>Ki Caldo</p>
+              <p>Mabel</p>
               <strong>PESO: </strong>
               <p>3 KG</p>
               <strong>PREÇO: </strong>
-              <p>R$ 6,00</p>
+              <p>R$ 4,50</p>
               <strong>QUANTIDADE: </strong>
               <p>100</p>
               <button >
@@ -205,13 +205,13 @@ export default function ListarProdutos() {
             </li>
             <li>
               <strong>NOME: </strong>
-              <p>Feijão</p>
+              <p>Coca Cola</p>
               <strong>FORNECEDOR: </strong>
-              <p>Ki Caldo</p>
+              <p>Coca Cola</p>
               <strong>PESO: </strong>
               <p>3 KG</p>
               <strong>PREÇO: </strong>
-              <p>R$ 6,00</p>
+              <p>R$ 8,00</p>
               <strong>QUANTIDADE: </strong>
               <p>100</p>
               <button >
@@ -220,13 +220,13 @@ export default function ListarProdutos() {
             </li>
             <li>
               <strong>NOME: </strong>
-              <p>Feijão</p>
+              <p>Detergente</p>
               <strong>FORNECEDOR: </strong>
-              <p>Ki Caldo</p>
+              <p>Ypê</p>
               <strong>PESO: </strong>
               <p>3 KG</p>
               <strong>PREÇO: </strong>
-              <p>R$ 6,00</p>
+              <p>R$ 4,00</p>
               <strong>QUANTIDADE: </strong>
               <p>100</p>
               <button >

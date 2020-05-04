@@ -21,18 +21,14 @@ export const mainListItems = (
       <ListItemText primary="Início" />
     </ListItem>
     </Link>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Vendas" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Fornecedores" />
-    </ListItem>
+    <Link to="/vendas" style={{ textDecoration: 'none' }}>
+      <ListItem button>
+        <ListItemIcon>
+          <ShoppingCartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Vendas" />
+      </ListItem>
+    </Link>
     <Link to="/conselhos" style={{ textDecoration: 'none' }}>
       <ListItem button>
         <ListItemIcon>
