@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CadastroProduto() {
+export default function EditarProduto() {
   const classes = useStyles();
 
   return (
@@ -58,7 +58,7 @@ export default function CadastroProduto() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Cadastrar Produto
+          Editar Produto
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -66,6 +66,7 @@ export default function CadastroProduto() {
             margin="normal"
             required
             fullWidth
+            value="Feijão (dado exemplo)"
             id="nomeProduto"
             label="Nome do Produto"
             name="email"
@@ -77,6 +78,7 @@ export default function CadastroProduto() {
             margin="normal"
             required
             fullWidth
+            value="Ki caldo (dado exemplo)"
             name="password"
             label="Nome do Fornecedor"
             type="text"
@@ -84,6 +86,7 @@ export default function CadastroProduto() {
 
           />
           <TextField
+            value="3 KG (dado exemplo)"
             variant="outlined"
             margin="normal"
             required
@@ -101,7 +104,7 @@ export default function CadastroProduto() {
             fullWidth
             name="password"
             label="Preço"
-
+            value="6,00 (dado exemplo)"
             type="text"
             id="precoProduto"
             autoComplete="current-password"
@@ -112,7 +115,7 @@ export default function CadastroProduto() {
             required
             fullWidth
             name="password"
-
+            value="100 (dado exemplo)"
             label="Quantidade em estoque"
             type="text"
             id="quantProduto"
@@ -126,6 +129,7 @@ export default function CadastroProduto() {
             name="password"
             label="Quantidade Mínima Aceitavel"
             type="text"
+            value="10 (dado exemplo)"
             id="minimoQuant"
 
           />
@@ -137,7 +141,7 @@ export default function CadastroProduto() {
               color="primary"
               className={classes.submit}
             >
-              Cadastrar Produto
+              Atualizar Produto
             </Button>
           </LinkReact>
         </form>

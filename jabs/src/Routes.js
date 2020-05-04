@@ -8,6 +8,7 @@ import CadastroProduto from './pages/Dashboard/CadastroProduto';
 import ListarProdutos from './pages/Dashboard/ListarProdutos';
 import Conselhos from './pages/Dashboard/Conselhos';
 import Vendas from './pages/Dashboard/Vendas';
+import EditarProduto from './pages/Dashboard/EditarProduto';
 
 export default function Routes() {
   return (
@@ -20,6 +21,7 @@ export default function Routes() {
         <Route path='/painel' exact component={ListarProdutos} />
         <Route path='/conselhos' exact component={Conselhos} />
         <Route path='/vendas' exact component={Vendas} />
+        <Route path='/editarProduto' exact component={EditarProduto} />
       </Switch>
     </BrowserRouter>
   )

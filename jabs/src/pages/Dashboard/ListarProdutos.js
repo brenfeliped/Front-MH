@@ -185,23 +185,26 @@ export default function ListarProdutos() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <ul>
-              {data.map((row) => (
-                <li>
-                  <strong>NOME: </strong>
-                  <p>{row.nome}</p>
-                  <strong>FORNECEDOR: </strong>
-                  <p>{row.fornecedor}</p>
-                  <strong>PESO: </strong>
-                  <p>{row.peso}</p>
-                  <strong>PREÇO: </strong>
-                  <p>{row.preco}</p>
-                  <strong>QUANTIDADE: </strong>
-                  <p>{row.quantidade}</p>
-                  <button >
-                    <Delete size={20} color="#a8a8b3" />
+            {data.map((row) => (
+              <li>
+                <strong>NOME: </strong>
+                <p>{row.nome}</p>
+                <strong>FORNECEDOR: </strong>
+                <p>{row.fornecedor}</p>
+                <strong>PESO: </strong>
+                <p>{row.peso}</p>
+                <strong>PREÇO: </strong>
+                <p>{row.preco}</p>
+                <strong>QUANTIDADE: </strong>
+                <p>{row.quantidade}</p>
+                <button >
+                  <Delete size={20} color="#a8a8b3" />
+                </button>
+                <button className="buttonAtualizar">
+                  Editar
                   </button>
-                </li>
-              ))}
+              </li>
+            ))}
           </ul>
         </Container>
       </main>
